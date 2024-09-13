@@ -47,7 +47,6 @@ public class Testiranje {
 
     }
 
-
     @Test
     public void testUntitled() throws Exception {
 
