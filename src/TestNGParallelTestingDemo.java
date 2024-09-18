@@ -22,8 +22,8 @@ public class TestNGParallelTestingDemo {
         // Set up ChromeOptions if needed
         options = new ChromeOptions();
         // Uncomment options below if needed
-        // options.addArguments("--headless");
-        // options.addArguments("--disable-gpu");
+         options.addArguments("--headless");
+         options.addArguments("--disable-gpu");
         // options.addArguments("--window-size=1920,1080");
 
         // Set the path for ChromeDriver
@@ -52,6 +52,14 @@ public class TestNGParallelTestingDemo {
     @Test
     public void Test2() throws InterruptedException {
         System.out.println("I am inside Test2 " + Thread.currentThread().getName());
+        // Get the WebDriver for the current thread
+        driver.get().get(url);
+        Thread.sleep(3000);
+    }
+
+    @Test
+    public void Test3() throws InterruptedException {
+        System.out.println("I am inside Test3 " + Thread.currentThread().getName());
         // Get the WebDriver for the current thread
         driver.get().get(url);
         Thread.sleep(3000);
