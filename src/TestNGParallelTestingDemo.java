@@ -41,6 +41,7 @@ public class TestNGParallelTestingDemo {
                 .ignoring(StaleElementReferenceException.class);
     }
 
+    //@Test(threadPoolSize = 3, invocationCount = 3, timeOut = 1000)
     @Test
     public void Test1() throws InterruptedException {
         System.out.println("I am inside Test1 " + Thread.currentThread().getName());
